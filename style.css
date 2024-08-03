@@ -1,0 +1,118 @@
+/* Setting the global parameter including the pre-added margins and removing padding*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Setting the body background as a gradient. */
+body {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(76deg, rgba(34, 193, 195, 1) 0%, rgba(159, 190, 110, 1) 26%, rgba(227, 188, 63, 1) 54%, rgba(237, 188, 56, 1) 72%, rgba(253, 187, 45, 1) 96%);
+    width: 100vw;
+    height: 100vh;
+}
+/* .outline {
+    border: 2px solid grey;
+    width: 800px;
+} */
+
+/* This is the top most container containing the child elements. Aligning the whole content box to center horizontally and vertically. */
+.container-zero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Second most container holding all the elements into it. */
+.container-one {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/* making all the buttons in the flex model and providing gap between the buttons. */
+.buttons-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Using a combinator selector to select all the button elements inside the container. */
+.buttons-container button {
+    width: 140px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: #fdc958;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Adding a hover effect over the buttons */
+.buttons:hover {
+    background-color: #b08320;
+    color: white;
+}
+
+/* Targeting the h1 element inside this particular container */
+.container-one h1 {
+    text-align: center;
+    padding: 20px;
+    /* background-color: #fedd97; */
+    background-color: #97701c;
+    border-radius: 15px;
+}
+
+/* Aligning the timer div items into a flex model for better alignment. */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Targeting the timer elements inside the timer div for highligting them. */
+.timers {
+    height: 120px;
+    width: 100px;
+    border: 1px solid #7e5e17;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 20px;
+    font-size: 60px;
+    box-shadow: 0 0 0 0.5px inset;
+    color: #fee4ab;
+}
+
+/* Decreasing the widht of the div in which the delimeter is present, since it has no content and to avoid extra spacing between the timers. */
+.delimeter {
+    width: 20px;
+    border: none;
+    box-shadow: none;
+}
+@media (max-width: 435px){
+    .container-one{
+        gap: 30px;
+    }
+
+    .timer{
+        margin-bottom: 35px;
+        margin-top: 35px;
+        gap: 2px;
+    }
+
+    .buttons-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .buttons-container button{
+        width: 200px;
+        height: 55px;
+        border-radius: 50px;
+    }
+}
